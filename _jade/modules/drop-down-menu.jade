@@ -1,0 +1,13 @@
+h2 Drop down menu
+nav.drop-down
+  ul
+    - var i = 0
+      while (i++ < 4)
+        li style #{i}
+          ul(class="drop-down-menu menu-#{i}")
+            li: a() uno
+            li: a() dos
+            li: a() tres
+            li: a() cuatro
+            li: a() cinco
+            li: a() seis

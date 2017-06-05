@@ -1,0 +1,53 @@
+/*******************************/
+/***       TYPOGRAPHY        ***/
+/*******************************/
+
+/***    EXTERNAL FONTS    ***/
+
+@font-face
+  font-family: 'Futura New'
+  src: url('../fonts/FTN45.otf')
+
+@font-face
+  font-family: 'Futura New'
+  src: url('../fonts/FTN65.otf')
+  font-weight: bold
+
+
+/***    ELEMENTS STYLES    ***/
+
+html
+  font-size: 100%
+
+body
+  font-family: "Helvetica Neue", sans-serif
+
+
+a:link, a:visited
+  color: $primary-color
+  text-decoration: none
+
+h1, h2
+  font-size: 2.75rem
+  font-weight: lighter
+  padding-top: 2.5rem
+  padding-bottom: 2.5rem
+
+h3
+  text-transform: uppercase
+  font-size: 1.25rem
+  margin-bottom: 1.6rem
+  color: $text-color-dark
+
+p
+  color: $text-color-normal
+  margin-bottom: 1.6rem
+  font-size: 1.25rem
+
+.text-strong
+  text-transform: uppercase
+  font-weight: bold
+
+*::selection, span::selection, a::selection
+  background-color: $selection-color
+  color: $text-color-invert

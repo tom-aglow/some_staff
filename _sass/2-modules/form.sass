@@ -1,0 +1,115 @@
+/*******************************/
+/***     FORM ELEMENTS       ***/
+/*******************************/
+label
+  font-size: 1.15rem
+  padding: 0.2rem 0.8rem
+
+input, textarea, select, option
+  font-family: "Helvetica Neue", sans-serif
+  padding: 0.2rem 0.8rem
+  margin-bottom: 1rem
+  font-size: 1.35rem
+  outline: none
+  border: 1px solid black
+  border-radius: 0
+
+
+textarea
+  max-width: 100%
+  resize: none
+
+
+
+/***    RADIO BUTTONS    ***/
+
+input[type=radio]
+  -webkit-appearance: none
+
+:root input[type=radio]
+  /* original radio are push outside the viewport */
+  position: absolute
+  left: -1000rem
+
+:root input[type=radio] + label:before
+  content: ""
+  display: inline-block
+  width: 17px
+  height: 17px
+  margin-right: 1rem
+  background: url("/img/elements/input-radio.svg") no-repeat 0 0
+  vertical-align: bottom
+  position: relative
+  bottom: 1px
+
+:root input[type=radio]:checked + label:before
+  background-position: 0 -20px
+
+:root input[type=radio]:disabled + label:before
+  background-position: 0 -40px
+
+:root input[type=radio]:checked:disabled + label:before
+  background-position: 0 -60px
+
+:root input[type=radio]:focus + label:before
+  outline: 1px dotted black
+
+
+
+/***      DATE PICKER      ***/
+input[type=date]
+  -webkit-appearance: none
+  &::-webkit-clear-button,
+  &::-webkit-inner-spin-button,
+  &::-webkit-calendar-picker-indicator
+    display: none
+
+
+/***      AWESOME FORM      ***/
+.awesome-form
+
+  input
+    background: none
+    border: 2px solid $primary-color
+    color: $primary-color
+    padding: 1rem 2.5rem
+    font-size: 1.125rem
+    font-weight: 500
+    display: inline-block
+
+    &[type="text"],
+    &[type="email"]
+      padding: 1rem 0
+      border: none
+      border-bottom: 2px solid $primary-color
+
+    &[type="submit"]
+      cursor: pointer
+      transition: all 0.5s
+      &:active,
+      &:hover
+        color: $text-color-invert
+        background-color: $primary-color
+
+
+
+  .input-group
+    position: relative
+    display: inline-block
+    margin-right: 1.25rem
+
+    label
+      padding: 0
+      font-size: 1.125rem
+      +position(absolute, calc(50% - 1.125rem) null null 0px)
+      color: $text-color-normal
+      font-weight: 300
+      pointer-events: none
+      transition: all 0.3s ease-in
+
+    input:focus + label,
+    input.has-value + label
+      top: -0.625rem
+      font-size: 0.75rem
+      color: $text-color-light
+

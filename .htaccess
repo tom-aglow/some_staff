@@ -1,0 +1,22 @@
+RewriteEngine On
+
+RewriteBase /
+#php_flag display_errors on
+#php_value error_reporting 6143
+
+#exceptions = all files .css, .js etc.
+RewriteCond %{REQUEST_FILENAME} !-f
+
+#rule // set parametr in get-array
+RewriteRule .* index.php?q=$0 [QSA]
+#QSA - query string add // enable additional get-parametrs
+
+
+<FilesMatch "\.(php)$" >
+Deny from all
+</FilesMatch>
+
+<FilesMatch "index.(php)$">
+Allow from all
+</FilesMatch>
+

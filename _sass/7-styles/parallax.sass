@@ -1,0 +1,278 @@
+.parallax-content
+  background-color: white
+  position: relative
+  z-index: 2
+
+  article
+    max-width: 600px
+    text-align: center
+    margin: 0 auto
+
+    h1
+      font:
+        weight: 400
+      color: $text-color-light
+
+    p
+      font:
+        weight: 300
+        size: 1rem
+      line-height: 1.5rem
+      margin-top: 1.6rem
+
+
+
+//  hero section
+header
+  z-index: 2
+
+.bird-box
+  position: relative
+  height: 600px
+  background:
+    image: url(../img/parallax/bird-bg.jpg)
+    size: auto 600px
+    repeat: no-repeat
+    position: top center
+    attachment: fixed
+  overflow: hidden
+
+.logo
+  height: 100px
+  width: 100%
+  background:
+    image: url(../img/parallax/black-bird-logo.svg)
+    position: center
+    repeat: no-repeat
+  +position(absolute, calc(50% - 50px) null null null)
+
+.fore-bird
+  width: 960px
+  height: 733px
+  background:
+    image: url(../img/parallax/fore-bird.png)
+    repeat: no-repeat
+    position: right bottom
+  +position(absolute, 380px null null calc(50% - 480px))
+
+
+.back-bird
+  width: 960px
+  height: 298px
+  background:
+    image: url(../img/parallax/back-bird.png)
+    repeat: no-repeat
+    position: top left
+  +position(absolute, null null null calc(50% - 480px))
+
+
+
+//  model grid
+
+.clothes-pics
+  margin-top: 2rem
+  margin-bottom: 4rem
+
+  .row
+    display: flex
+    flex-direction: row
+
+  .col-4
+    flex-basis: calc(100% / 3)
+    margin: 10px
+
+  figure
+    position: relative
+    opacity: 0
+    transform: translateX(20px)
+    transition: all 1s ease-in-out
+    overflow: hidden
+    cursor: pointer
+
+    img
+      display: block
+      transform: scale(1)
+      transition: all 0.5s ease-in-out
+      transform-origin: center top
+
+    &.is-showing
+      opacity: 1
+      transform: translateX(0px)
+
+    &:hover
+      figcaption
+        left: 0
+      img
+        transform: scale(1.2)
+
+  figcaption
+    +position(absolute, null null 0.5rem -100%)
+    background-color: black
+    color: white
+    padding: 0.25rem 0.5rem
+    font-size: 0.75rem
+    transition: all 0.5s ease-in-out
+
+
+
+//  large window
+
+.large-window
+  height: 600px
+  background:
+    image: url(../img/parallax/model2.jpg)
+    position: top 0px
+    repeat: repeat-y
+    attachment: fixed
+  margin-top: 100px
+  margin-bottom: 100px
+  border-radius: 50%
+  position: relative
+
+  .window-tint
+    background-color: rgba(0, 0, 0, 0.5)
+    +position(absolute, 0px 0px 0px 0px)
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+
+  .promo-text
+    color: white
+    font:
+      size: 3rem
+      weight: 100
+
+    strong
+      display: block
+      font-size: 2rem
+
+    span
+      font:
+        size: 1rem
+        weight: 100
+        style: italic
+      color: grey
+
+    .btn
+      margin-top: 3rem
+      background-color: transparent
+      border-color: white
+
+      &:hover
+        background-color: white
+        color: black
+
+
+//  posts section
+
+.blog-posts
+  &.row
+    display: flex
+
+  .col-4
+    flex-basis: calc(100% / 3)
+    margin: 10px
+    display: flex
+    flex-direction: column
+    .btn
+      margin-top: auto
+
+  margin-top: 100px
+  margin-bottom: 200px
+
+  .posts
+    border: 1px solid #c9c9c9
+    padding: 1rem
+    padding-bottom: 2rem
+    background-color: white
+    position: relative
+
+    h5
+      font-size: 1.25rem
+      font-weight: 400
+      margin-top: 0
+
+  .post-1
+    transform: translate(100px, 20px)
+
+  .post-2
+    z-index: 2
+
+  .post-3
+    transform: translate(-100px, 20px)
+
+
+//  footer
+footer
+  background-color: $primary-color
+  color: $text-color-invert
+  padding: 40px 0
+  position: fixed
+  bottom: 0
+  width: 100%
+
+  .footer-stuff
+    max-width: 700px
+    margin: 0 auto
+    display: flex
+
+    //grid
+
+    .col-3
+      flex-basis: calc(100% / 4)
+    .col-4
+      flex-basis: calc(100% / 3)
+    .col-6
+      flex-basis: calc(100% / 2)
+    .col-8
+      flex-basis: calc(100% / 3 * 2)
+
+    form.awesome-form
+      display: flex
+      align-items: center
+
+      .input-group
+        width: 100%
+
+      input[type="submit"]
+        padding: 0.5rem 0.8rem
+
+      input[type="submit"],
+      input[type="email"],
+      label
+        font-size: 1rem
+        border-color: $text-color-invert
+        color: $text-color-invert
+
+      input[type="email"],
+      label
+        width: 90%
+        color: $text-color-invert
+
+
+
+
+    //typography
+
+    h5
+      font-size: 1rem
+      text-transform: uppercase
+      margin-top: 0
+
+    p
+      font-size: 1rem
+      color: $text-color-invert
+
+    ul
+      list-style-type: circle
+      margin-left: 15px
+      font-weight: 300
+      font-size: 0.85rem
+
+      li
+        margin: 10px 0
+      a
+        color: $text-color-invert
+
+

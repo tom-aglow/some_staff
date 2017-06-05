@@ -1,0 +1,118 @@
+/*******************************/
+/***         BUTTONS         ***/
+/*******************************/
+
+
+//general styles
+
+.btn
+  text-transform: uppercase
+  text-decoration: none
+  font-weight: lighter
+  cursor: pointer
+
+
+//sizes
+
+.btn-lg
+  padding: 1rem 2.6rem
+  font-size: 1.5rem
+
+.btn-md
+  padding: 0.5rem 1.5rem
+  font-size: 1.125rem
+
+.btn-sm
+  padding: 0.5rem 0.5rem
+  font-size: 0.9rem
+
+// colors
+
+.btn-primary
+  color: $text-color-invert
+  &:link, &:visited
+    color: $text-color-invert
+  background-color: $primary-color
+  border: 1px solid $primary-color
+  transition: all 1s
+
+  &:hover
+    background-color: transparent
+    color: $primary-color
+
+    &:link, &:visited
+      color: $primary-color
+
+
+
+.btn-two
+  color: $text-color-invert
+  &:link, &:visited
+    color: $text-color-invert
+  background-color: $primary-color
+  border-radius: 7px
+  transition: all 0.5s
+
+  &:hover
+    box-shadow: 0 0 0 2px white, 0 0 0 4px $primary-color
+
+
+.btn-three
+  color: $text-color-invert
+  &:link, &:visited
+    color: $text-color-invert
+  background-color: $primary-color
+  border-radius: 7px
+  transition: all 0.5s
+
+  &:hover
+    box-shadow: 0 0 0 1px $primary-color inset, 0 0 0 2px white inset
+
+
+.btn-four
+  color: $text-color-invert
+  &:link, &:visited
+    color: $text-color-invert
+  background-color: $primary-color
+  border-radius: 7px
+  transition: all 0.5s
+  position: relative
+  top: 0
+  left: 0
+
+  &:hover
+    box-shadow: 2px 2px white, 4px 4px 0 $primary-color
+    top: -4px
+    left: -4px
+
+
+.btn-five
+  color: $text-color-invert
+  &:link, &:visited
+    color: $text-color-invert
+  background-color: $primary-color
+  transition: all 0.5s
+  box-shadow: 5px 5px lighten($primary-color, 40%)
+  position: relative
+  top: 0
+  left: 0
+
+  &:hover
+    background: darken($primary-color, 7%)
+
+  &:active
+    top: 5px
+    left: 5px
+    box-shadow: 0 0 lighten($primary-color, 0%)
+
+.btn-six
+  background-color: $secondary-color
+  &:link, &:visited
+    color: $text-color-invert
+  border-radius: 7px
+  box-shadow: 0 17px 10px -10px rgba(0, 0, 0, 0.4)
+  transition: all 0.5s ease-in-out
+  &:hover
+    box-shadow: 0 37px 20px -20px rgba(0, 0, 0, 0.3)
+    transform: translateY(-10px)
+

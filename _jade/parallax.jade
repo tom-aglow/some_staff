@@ -1,0 +1,124 @@
+doctype html
+
+mixin copy()
+  hr
+  p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dui ligula, laoreet ac dictum vitae, rhoncus nec dolor. Aenean vel erat bibendum, congue velit commodo, condimentum sem. Phasellus consectetur tortor ac arcu ultricies, et pharetra arcu pulvinar. Aliquam pretium, magna vitae vehicula feugiat, lorem magna tempus neque, eget eleifend massa metus at urna. Curabitur non varius risus. Vestibulum iaculis ligula ut dolor semper, non aliquet lectus varius. Nunc eu rhoncus ex. Nunc varius urna erat, nec eleifend augue tempor eu. In hac habitasse platea dictumst.
+  hr
+
+mixin post(img, text)
+  h5 Post Title
+  img(src="../img/parallax/posts/#{img}.jpg")
+  p #{text}
+  a.btn.btn-sm.btn-primary Read More
+
+html(lang="en")
+  head
+    title Parallax
+    meta(charset="utf-8")
+    meta(name="viewport", content="with=device--width, initial-scale=1")
+    link(rel="stylesheet", href="../css/main.css")
+
+    //jQuery MDN
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js")
+  body
+
+    header.bird-box
+      .back-bird
+      .logo
+      .fore-bird
+
+    section.parallax-content
+
+      article
+
+        h1 Unique style
+
+        +copy()
+
+        .clothes-pics
+          .row
+            figure.col-4
+              img(src="../img/parallax/model1.jpg")
+              figcaption BlackBird Sweater - <strong>$130</strong>
+            figure.col-4
+              img(src="../img/parallax/model2.jpg")
+              figcaption BlackBird Trousers - <strong>$150</strong>
+            figure.col-4
+              img(src="../img/parallax/model3.jpg")
+              figcaption BlackBird Jacket - <strong>$250</strong>
+          .row
+            figure.col-4
+              img(src="../img/parallax/model2.jpg")
+              figcaption BlackBird Trousers - <strong>$150</strong>
+            figure.col-4
+              img(src="../img/parallax/model3.jpg")
+              figcaption BlackBird Jacket - <strong>$250</strong>
+            figure.col-4
+              img(src="../img/parallax/model1.jpg")
+              figcaption BlackBird Sweater - <strong>$130</strong>
+          .row
+            figure.col-4
+              img(src="../img/parallax/model2.jpg")
+              figcaption BlackBird Jacket - <strong>$250</strong>
+            figure.col-4
+              img(src="../img/parallax/model1.jpg")
+              figcaption BlackBird Sweater - <strong>$130</strong>
+            figure.col-4
+              img(src="../img/parallax/model3.jpg")
+              figcaption BlackBird Trousers - <strong>$150</strong>
+
+
+        h1 Fine Tailoring
+
+        +copy()
+
+        .large-window
+          .window-tint
+            .promo-text Fall Suits
+              strong <span>from</span> $99
+              a(href="").btn.btn-md.btn-primary Shop Now
+
+        h1 Rich History
+
+        +copy()
+
+        .blog-posts.row
+          .posts.post-1.col-4
+            +post('one', 'Phasellus consectetur tortor ac arcu ultricies, et pharetra arcu pulvinar.')
+
+          .posts.post-2.col-4
+            +post('two', 'Aliquam pretium, magna vitae vehicula feugiat, lorem magna tempus neque.')
+
+          .posts.post-3.col-4
+            +post('three', 'Lorem magna tempus neque, eget eleifend massa metus at urna.')
+
+
+    footer
+      .row.footer-stuff
+        .col-3
+          h5 Find Us
+          ul
+            each item in ['Twitter', 'Facebook', 'Pinterest', 'Instagram']
+              li: a(href="")=item
+
+        .col-3
+          h5 Other Shops
+          ul
+            li: a(href="") Red Robin
+            li: a(href="") Emerald Eagle
+            li: a(href="") Crimson Crane
+            li: a(href="") Auburn Abbot
+        .col-6
+          p <strong>Sign up for newsletter</strong> Sed iaculis elit non augue laoreet, sit amet blandit ipsum commodo.
+          form.awesome-form
+            .col-8
+              .input-group
+                input(type="email")
+                label Enter your e-mail address
+            .col-4: input(type="submit")
+            script(src="../js/awesome-labels.js")
+
+
+  div(style="height: 300px; z-index: -100;")
+
+  script(src="../js/parallax.js")

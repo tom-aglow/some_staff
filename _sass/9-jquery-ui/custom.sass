@@ -1,0 +1,93 @@
+/*******************************/
+/*** jQuery UI: CUSTOMISATION  ***/
+/*******************************/
+
+.ui-widget
+  font-family: "Futura New", sans-serif
+  outline: none
+  &.ui-widget-content
+    border-color: $primary-color
+
+
+.ui-widget-header
+  color: $accent-color
+  background-color: $primary-color
+  .ui-icon
+    background-image: url("/img/jquery-ui/ui-icons_cccccc_256x240.png")
+
+.ui-widget-content
+  background-color: $accent-color
+  color: $primary-color
+  .ui-icon
+    background-image: url("/img/jquery-ui/ui-icons_777777_256x240.png")
+
+
+.ui-button .ui-icon
+  background-image: url("/img/elements/input-select.svg")
+  background-position: center calc(50% + 2px)
+  background-size: auto 1rem
+
+.ui-selectmenu-button.ui-button
+  padding: 0.2rem 0.8rem
+  font-size: 1.35rem
+  margin-bottom: 1rem
+  box-sizing: border-box
+
+
+//default state
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active
+  background-color: $accent-color
+  border: 1px solid $primary-color
+
+
+
+//hover state
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-button:hover,
+.ui-button:focus
+  background-color: $primary-color
+  color: $accent-color
+  border-color: $primary-color
+
+
+//highlighted state
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight
+  color: $accent-color
+  background-color: $text-color-normal
+
+
+//active state
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover
+  color: $accent-color
+  background-color: $primary-color
+  border-color: $primary-color
+
+
+
+//disabled state
+
+.ui-state-disabled,
+.ui-widget-content .ui-state-disabled,
+.ui-widget-header .ui-state-disabled
+  opacity: 0.5
